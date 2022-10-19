@@ -1,15 +1,15 @@
 The Uni programming language is a simple programming language for educational purposes.
 
 ## How to install
-Build the interpreter from the source-code. In order to build it from the source-code, you need `git`, and `go` version 1.19 or later. Run the following commands to build from the source-code:
+In order to build it from the source code, you need `git`, and `go` version 1.19 or later. Run the following commands to build from the source code:
 ```sh
-git clone https://github.com/parsaakbari1209/uni-lang.git
-cd uni-lang
+git clone git@github.com:parsaakbari1209/university.git
+cd university/interpreter
 go build -o uni
 ```
 ---
 ## How to use
-The uni-lang uses `.uni` suffix(e.g. `main.uni`). Use the following command to execute a uni-lang source-code:
+The uni-lang uses `.uni` suffix(e.g. `main.uni`). Use the following command to execute a uni-lang source code:
 ```sh
 // Linux
 ./uni main.uni
@@ -23,40 +23,27 @@ The uni-lang uses `.uni` suffix(e.g. `main.uni`). Use the following command to e
 ### Boolean
 ```
 true
-!true
-true or true
-true and true
-
-false
 !false
-false or false
-false and false
-
 true or false
-false or true
-true and false
-false and true
+true and true
+false == false
+true != false
 ```
 ### Number
 ```
 1
--1
-1 + 2
-1 - 2
-1 * 2
-1 / 2
+-1.0
+1.0 + 2
+1.0 - 2
+1.0 * 2
+1.0 / 2
+1.0 < 2
+1.0 > 2
+1.0 <= 2
+1.0 >= 2
+1.0 == 2
+1.0 != 2
 
-1.5
--1.5
-1.1 + 2.2
-1.1 - 2.2
-1.1 * 2.2
-1.1 / 2.2
-
-1 + 2.2
-1 - 2.2
-1 * 2.2
-1 / 2.2
 ```
 ### String
 ```
@@ -65,54 +52,55 @@ false and true
 ```
 ### Variable
 ```
-num = 0
-str = "Hello World!"
+var a = 0
+a = 0.0
+a = "Hello World!"
+
 ```
 ### Array
 ```
-num = [0, 1, 2]
+var num = [0, 1, 2]
 num[0]
 
-str = ["Hello", "World", "!"]
+var str = ["Hello", "World", "!"]
 str[0]
 
-mix = [1, "Hello", 1.5, "World"]
+var mix = [1, "Hello", 1.5, "World"]
 mix[0]
 ```
 ### Map
 ```
-data = {"slug": "Hello World!", "version": 1}
+var data = {"slug": "Hello World!", "version": 1}
 data["slug"]
 ```
 ### Condition
 ```
 if a == b {
-    // ...
+    #...
 }
 
 if a == b {
-    // ...
+    #...
 } else {
-    // ...
+    #...
 }
 ```
 ### Loop
 ```
 while true {
-    // ...
+    #...
 }
 
-for i in (1, 5) {
-    // ...
+for k, v in "Hello World" {
+    #...
 }
 
-for i in "Hello World" {
-    // ...
+for k, v in ["Hello", "World", "!"] {
+    #...
 }
 
-var arr = ["Hello", "World", "!", 1]
-for i in arr {
-    // ...
+for k, v in {"one": 1, "two": 2} {
+    #...
 }
 ```
 ### Function
