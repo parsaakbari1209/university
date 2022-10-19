@@ -1,4 +1,4 @@
-module github.com/parsaakbari1209/uni-lang
+module github.com/parsaakbari1209/university/interpreter
 
 go 1.19
 
